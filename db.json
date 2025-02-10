@@ -1,0 +1,8 @@
+{
+  "groceries":{  "groceries":[
+        {"id":1,"type":"fruit","name":"veg"},
+        {"id":2,"type":"fruit","name":"milk"},
+        {"id":3,"type":"snacks","name":"fish"},
+        {"id":4,"type":"snacks","name":"eggs"}
+    ]}
+}

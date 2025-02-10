@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.alert-success {
+  background-color: #dff0d8 !important;
+  border-color: #d0e9c6 !important;
+  color: #3c763d !important;
+  text-align: center;
+}
+
+.alert-error {
+  background-color: #f2dede !important;
+  border-color: #ebcccc !important;
+  color: #a94442 !important;
+  text-align: center;
+}
+.alert .mat-simple-snackbar {
+  justify-content: center;
+}
+mat-card.mat-mdc-card, .mdc-card{background-color: #fcd8f3 !important}
+
+
+.mat-mdc-card {    
+  background-color: blue !important;
+}
