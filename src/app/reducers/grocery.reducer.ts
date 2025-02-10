@@ -57,4 +57,14 @@ on(groceryAction["[Grocery]SuccessAPI"],(state,action)=>{
     groceries: action.payload.groceries
   }}
 }),
+
+on(groceryAction["[Grocery]FailiureAPI"],(state,action)=>{
+  return {
+    ...state,...{
+    loaded: true,
+    loading: false, error: true,
+    groceries: []
+  }}
+}),
+
 );

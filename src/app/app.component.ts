@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import { GroceryService } from './services/grocery.service';
 import { RootReducerState } from './reducers';
 import { Store } from '@ngrx/store';
 import { groceryAction } from './actions/grocery.action';

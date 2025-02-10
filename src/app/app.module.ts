@@ -35,6 +35,7 @@ import { BucketComponent } from './components/coders-never-quit/bucket.component
 import { CodersneverquitComponent } from './components/coders-never-quit/codersneverquit.component';
 import { EffectsModule } from '@ngrx/effects';
 import { GroceryEffects } from './effects/grocery.effect';
+import { GroceryService } from './services/grocery.service';
 
 
 @NgModule({
@@ -77,7 +78,7 @@ import { GroceryEffects } from './effects/grocery.effect';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [HttpService, ApiService, YoutubeRepository],
+  providers: [HttpService, ApiService, YoutubeRepository,GroceryService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

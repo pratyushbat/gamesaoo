@@ -10,6 +10,7 @@ import { RootReducerState } from '../../reducers';
   template: `
     <div class="row">
       <h1>BucketComponent</h1>
+      <p>angular service is not singleton if privided in component only</p>
       <div *ngFor="let groc of bucket$ | async">      
         {{groc.name}}  x  {{groc.quantity}} 
       </div>

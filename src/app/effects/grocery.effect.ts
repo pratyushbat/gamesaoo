@@ -15,7 +15,7 @@ export class GroceryEffects {
           exhaustMap(() => this.groceryService.getAlGrocery()
             .pipe(
               map((data:any) => (groceryAction["[Grocery]SuccessAPI"]({payload:data}))),
-              catchError(() => of(groceryAction["[Grocery]FailiureAPI"]))
+              catchError(() => of(groceryAction["[Grocery]FailiureAPI"]()))
             ))
       );
     });

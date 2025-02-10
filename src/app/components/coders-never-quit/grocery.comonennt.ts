@@ -17,7 +17,6 @@ import {
   selectGroceriesAll,
   selectGroceriesByType,
 } from '../../selectors/grocery.selector';
-import { GroceryService } from '../../services/grocery.service';
 
 
 @Component({
@@ -52,7 +51,7 @@ export class GroceryComponent implements OnInit {
   groceries$: Observable<Grocery[]> = this.store.select(selectGroceriesAll);
   filteredGroceries$: Observable<Grocery[]> | null=null;
 
-  constructor(private store: Store<RootReducerState>,private groceryService:GroceryService) {
+  constructor(private store: Store<RootReducerState>) {
     this.store.dispatch(initBucket());
   }
 

@@ -4,6 +4,7 @@ import {YoutubeRepository} from '../services/youtube-repository';
 import {takeWhile} from 'rxjs/operators';
 import {MatDialog} from '@angular/material/dialog';
 import {UpdateUserComponent} from '../components/update-user.component';
+import { GroceryService } from '../services/grocery.service';
 
 @Component({
   selector: 'youtube-users',
@@ -15,7 +16,8 @@ import {UpdateUserComponent} from '../components/update-user.component';
       <button *ngIf="!this.loading && !this.error" (click)="addUser()" mat-raised-button color="primary">Add User</button>
     </div>
   `,
-  styles: [``]
+  styles: [``],
+  providers:[GroceryService]
 })
 
 export class UsersComponent implements OnInit, OnDestroy {
@@ -24,7 +26,7 @@ export class UsersComponent implements OnInit, OnDestroy {
   error = false;
   isAlive = true;
 
-  constructor(private youtubeRepository: YoutubeRepository, private dialog: MatDialog) {
+  constructor(private youtubeRepository: YoutubeRepository, private dialog: MatDialog, private groceryService:GroceryService) {
   }
 
   ngOnInit() {
