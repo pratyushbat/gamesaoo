@@ -13,6 +13,7 @@ const routes: Routes = [{
   path: '', component: DashboardComponent,
   children: [
     {path: '', component: UsersComponent},
+    {path: 'contact', loadChildren: () => import('./contact/contact.module').then(m=>m.ContactModule)},
     {path: 'user/:id', component: ViewUserComponent},
     {path: 'post', component: PostComponent},
     {path: 'add-item', component: AddItemComponent},

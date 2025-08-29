@@ -9,6 +9,7 @@ import { getCountCartState, RootReducerState } from '../../reducers';
       <div fxLayoutAlign="start center" fxFlex="100%" fxHide.xs>
         <button mat-button routerLink="" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="selected">Users</button>
         <button mat-button routerLink="/post" routerLinkActive="selected">Posts</button>
+        <button mat-button routerLink="/contact/child" routerLinkActive="selected">Contact lazy</button>
         <button mat-button routerLink="/counter" routerLinkActive="selected">Counter</button>
         <button mat-button routerLink="/codersneverquit" routerLinkActive="selected">codersneverquit</button>
         <button mat-button routerLink="/add-item" routerLinkActive="selected">Items</button>

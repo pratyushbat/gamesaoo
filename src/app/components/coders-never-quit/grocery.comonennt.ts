@@ -18,12 +18,11 @@ import {
   selectGroceriesByType,
 } from '../../selectors/grocery.selector';
 
-
 @Component({
   selector: 'grocery',
   template: `
     <div class="row">
-      <h1>GroceryComponent</h1>
+      <h1>GroceryComponent {{ selected }}</h1>
       <select class="type-select" (change)="onTypeChange($event)">
         <option value="">Select type</option>
         <option value="fruit">Fruit</option>
@@ -48,16 +47,60 @@ import {
   styles: [``],
 })
 export class GroceryComponent implements OnInit {
+  selected: boolean = false;
   groceries$: Observable<Grocery[]> = this.store.select(selectGroceriesAll);
-  filteredGroceries$: Observable<Grocery[]> | null=null;
+  filteredGroceries$: Observable<Grocery[]> | null = null;
 
   constructor(private store: Store<RootReducerState>) {
     this.store.dispatch(initBucket());
   }
 
   ngOnInit(): void {
-    
+    // this.javafunc();
+    const myinc = this.incclos();
+    console.log(myinc());
+    console.log(myinc());
+    console.log(myinc());
     // this.getGroceriesData();
+  }
+
+  incclos() {
+    let count = 0;
+    // outer environment=lexical environment
+
+    return () => {
+      // count can be acccess from parent and this is closure
+      count = count + 1;
+      return count;
+    };
+  }
+
+memoizationsquare(){
+
+}
+
+
+  javafunc() {
+    let citites = [
+      'delhi',
+      'delhi',
+      'mp',
+      'up',
+      'delhi',
+      'mp',
+      'mp',
+      'tl',
+      'up',
+    ];
+   
+
+// 1st way     
+    citites = citites.filter((value, index, arr) => arr.indexOf(value) == index);
+
+    // 2nd way 
+    let ucitites = new Set(citites);
+    let ucitiesarr = [...ucitites];
+    console.log(ucitiesarr);
   }
   // getGroceriesData() {
   //   this.store.dispatch(requestGrocery());

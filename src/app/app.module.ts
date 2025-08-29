@@ -36,6 +36,15 @@ import { CodersneverquitComponent } from './components/coders-never-quit/codersn
 import { EffectsModule } from '@ngrx/effects';
 import { GroceryEffects } from './effects/grocery.effect';
 import { GroceryService } from './services/grocery.service';
+import { HighlightDirective } from './directives/highlight.directive';
+import { AppInputDirective } from './directives/appinput.directive';
+import { ListDirective } from './directives/list.directive';
+import { EmbeddedViewDirective } from './directives/embedded-view.component';
+import { AccordianDirective } from './directives/structural.directive';
+
+import { AccordianComponent } from './components/coders-never-quit/accordian.component';
+import { TabComponent } from './components/coders-never-quit/tab.component';
+import { GreetComponent } from './components/coders-never-quit/greet/greet.component';
 
 
 @NgModule({
@@ -61,7 +70,16 @@ import { GroceryService } from './services/grocery.service';
     CounterButtonComponent,
     CodersneverquitComponent,
     BucketComponent,
-    GroceryComponent
+    GroceryComponent,
+    
+    HighlightDirective,
+    AppInputDirective,
+    ListDirective,
+    EmbeddedViewDirective,
+    AccordianDirective,
+    TabComponent,
+    AccordianComponent,
+    GreetComponent
 
   ],
   imports: [
